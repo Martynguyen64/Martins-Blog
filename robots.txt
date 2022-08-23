@@ -1,1 +1,1 @@
-Sitemap: https://fastpages.fast.ai/sitemap.xml
+Sitemap: https://martynguyen64.github.io/Martins-Blog/sitemap.xml
