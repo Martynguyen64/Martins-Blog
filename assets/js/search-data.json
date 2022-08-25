@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Fastpages Notebook Blog Post",
+            "title": "Martys First Jupyter NB Post",
             "content": "Using The Print function . print (&quot;Hello World&quot;) . . Using the Print Function Again . print (&quot;Hello World&quot; * 6) .",
             "url": "https://martynguyen64.github.io/Martins-Blog/jupyter/2022/08/25/First-Notebook.html",
             "relUrl": "/jupyter/2022/08/25/First-Notebook.html",
