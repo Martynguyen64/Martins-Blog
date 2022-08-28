@@ -54,6 +54,17 @@
 
   
       ,"page1": {
+          "title": "CSP Notes",
+          "content": "Notes For CSP . Markdown posts show text but don’t process code | Jupyter notebooks permit us to exemplify running code | . How to start coding . How to Enter and Code with wsl: . PS C: Users Dide&gt; wsl (base) martinnguyen64@LAPTOP-LDAO5KM3:/mnt/c/Users/marti$ cd ~ (base) martinnguyen64@LAPTOP-LDAO5KM3:~$ cd vscode (base) martinnguyen64@LAPTOP-LDAO5KM3:~/vscode$ cd Martins-Blog (base) martinnguyen64@LAPTOP-LDAO5KM3:~/vscode/Martins-Blog$ code . . How to Create Notebooks Utilizing Bash . Enter vscode with wsl. . | Use these commands with python: . | echo &quot;Using conditional statement to create a project directory and project&quot; # Variable section export project_dir=$HOME/vscode # change vscode to different name to test git clone export project=$project_dir/APCSP # change APCSP to name of project from git clone export project_repo=&quot;https://github.com/nighthawkcoders/APCSP.git&quot; # change to project of choice cd ~ # start in home directory # Conditional block to make a project directory if [ ! -d $project_dir ] then echo &quot;Directory $project_dir does not exists... makinng directory $project_dir&quot; mkdir -p $project_dir fi echo &quot;Directory $project_dir exists.&quot; # Conditional block to git clone a project from project_repo if [ ! -d $project ] then echo &quot;Directory $project does not exists... cloning $project_repo&quot; cd $project_dir git clone $project_repo cd ~ fi echo &quot;Directory $project exists.&quot; . Change repo link to my own . You can look at files in folder with this: | # You must run cells above to define variable and project echo &quot;Navigate to project, then navigate to area wwhere files were cloned&quot; cd $project pwd echo &quot;&quot; echo &quot;list top level or root of files with project pulled from github&quot; ls echo &quot;&quot; echo &quot;list again with hidden files pulled from github&quot; ls -a # hidden files flag, many shell commands have flags echo &quot;&quot; echo &quot;list all files in long format&quot; ls -al # all files and long listing . # You must run cells above to define variable and project echo &quot;Look for posts&quot; export posts=$project/_posts # _posts inside project cd $posts # this should exist per fastpages pwd # present working directory ls -l # list posts . # You must run cells above to define variable and project echo &quot;Look for notebooks&quot; export notebooks=$project/_notebooks # _notebooks is inside project cd $notebooks # this should exist per fastpages pwd # present working directory ls -l # list notebooks . # You must run cells above to define notebooks location echo &quot;Look for images in notebooks, print working directory, list files&quot; cd $notebooks/images # this should exist per fastpages pwd ls -l . You can also look inside files (markdown file): | # You must run cells above to define project echo &quot;Navigate to project, then navigate to area wwhere files were cloned&quot; cd $project echo &quot;show the contents of README.md&quot; echo &quot;&quot; cat README.md # show contents of file, in this case markdown echo &quot;&quot; echo &quot;end of README.md&quot; .",
+          "url": "https://martynguyen64.github.io/Martins-Blog/notes/",
+          "relUrl": "/notes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "Hi! This Fastpages website was constructed by Martin Nguyen. I am a Junior at Del Norte. . I play basketball and track/field | I like to go to the gym in my freetime | I enjoy stem stuff like CS and medical fields | I have 6 memebers in my family (two twin younger brothers, a younger sister, and my parents) | .",
           "url": "https://martynguyen64.github.io/Martins-Blog/about/",
@@ -85,7 +96,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://martynguyen64.github.io/Martins-Blog/robots.txt",
