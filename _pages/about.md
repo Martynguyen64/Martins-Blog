@@ -4,7 +4,11 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Hi! This Fastpages website was constructed by Martin Nguyen. I am a Junior at Del Norte. 
+  - I play basketball and track/field
+  - I like to go to the gym in my freetime
+  - I enjoy stem stuff like CS and medical fields
+  - I have 6 memebers in my family (two twin younger brothers, a younger sister, and my parents) 
 
 
 
