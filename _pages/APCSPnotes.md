@@ -9,7 +9,6 @@ permalink: /notes/
 - Markdown posts show text but don't process code
 - Jupyter notebooks permit us to exemplify running code
 
-## How to start coding
 
 ## How to Enter and Code with wsl:
 
