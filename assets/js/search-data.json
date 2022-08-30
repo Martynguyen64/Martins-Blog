@@ -4,9 +4,9 @@
         "post0": {
             "title": "Python NBA Quiz",
             "content": "import getpass, sys questions = 5 correct = 0 def question_and_answer(prompt, answer): print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) if answer == msg: print(&quot;Correct Answer&quot;) global correct correct+=1 else: print (&quot;Incorrect Answer&quot;) question_and_answer(&quot;What team does Lebron James play for?&quot;, &quot;Lakers&quot;) question_and_answer(&quot;What team does Kevin Durant play for?&quot;, &quot;Nets&quot;) question_and_answer(&quot;What team does Stephen Curry play for?&quot;, &quot;Warriors&quot;) question_and_answer(&quot;Who won the 2022 NBA Championship?&quot;, &quot;Warriors&quot;) question_and_answer(&quot;Who is the G.O.A.T?&quot;, &quot;Michael Jordan&quot;) print(correct, &quot;Answers correct&quot;) . Question: What team does Lebron James play for? Answer: Lakers Correct Answer Question: What team does Kevin Durant play for? Answer: Nets Correct Answer Question: What team does Stephen Curry play for? Answer: Warriors Correct Answer Question: Who won the 2022 NBA Championship? Answer: Warriors Correct Answer Question: Who is the G.O.A.T? Answer: Michael Jordan Correct Answer 5 Answers correct .",
-            "url": "https://martynguyen64.github.io/Martins-Blog/jupyter/2022/08/28/quizzes23.html",
-            "relUrl": "/jupyter/2022/08/28/quizzes23.html",
-            "date": " • Aug 28, 2022"
+            "url": "https://martynguyen64.github.io/Martins-Blog/jupyter/2022/08/29/quizzes23.html",
+            "relUrl": "/jupyter/2022/08/29/quizzes23.html",
+            "date": " • Aug 29, 2022"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Chapter 7 Bio Notes",
             "content": "Natural Selection . Differential Repoductive Success is natural selection . | If you have a higher fitness level, higher survivability . Higher fitness pass on genes, lower fitness die . | . | Evolution creates new alleials . | Gene pool is a combination of all genes in population . | Mutation and reproduction create variety . Adaptation is from these two . | . | Hardy Weinberg Equilibrium . 1848 . p^2 + 2pq + q^2 = l . | DD Dd dd . | q^2 = .98 . Q = .99 . | . | . | 1895 . q^2 = .05 . Q = .22 . | . | . | . | Adaptation Process . Adapt to environment through natural selection to exploit niches . | They work their way up the ecosystem . | Species are created as traits are formed from adaptions to the enviroment . | . | .",
-            "url": "https://martynguyen64.github.io/Martins-Blog/2022/08/28/Chapter-7-bio-notes.html",
-            "relUrl": "/2022/08/28/Chapter-7-bio-notes.html",
-            "date": " • Aug 28, 2022"
+            "url": "https://martynguyen64.github.io/Martins-Blog/2022/08/29/Chapter-7-bio-notes.html",
+            "relUrl": "/2022/08/29/Chapter-7-bio-notes.html",
+            "date": " • Aug 29, 2022"
         }
         
     
