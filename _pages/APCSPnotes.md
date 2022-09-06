@@ -8,6 +8,8 @@ permalink: /notes/
 
 - Markdown posts show text but don't process code
 - Jupyter notebooks permit us to exemplify running code
+- You can utilize markdown to make tables
+- There 3 different loops you can utilize (for loop, while loop, recursive loop)
 
 
 ## How to Enter and Code with wsl:
