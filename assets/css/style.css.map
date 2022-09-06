@@ -3,9 +3,9 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"../../tmp/jekyll-remote-theme-20220906-1-air5f4/_sass/jekyll-theme-architect.scss",
-		"../../tmp/jekyll-remote-theme-20220906-1-air5f4/_sass/normalize.scss",
-		"../../tmp/jekyll-remote-theme-20220906-1-air5f4/_sass/rouge-github.scss"
+		"../../tmp/jekyll-remote-theme-20220906-1-1pldv5x/_sass/jekyll-theme-architect.scss",
+		"../../tmp/jekyll-remote-theme-20220906-1-1pldv5x/_sass/normalize.scss",
+		"../../tmp/jekyll-remote-theme-20220906-1-1pldv5x/_sass/rouge-github.scss"
 	],
 	"sourcesContent": [
 		"@import 'jekyll-theme-architect';\n",
