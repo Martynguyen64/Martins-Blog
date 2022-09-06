@@ -131,10 +131,7 @@
   
 
   
-  
-
-  
-      ,"page12": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://martynguyen64.github.io/Martins-Blog/robots.txt",
