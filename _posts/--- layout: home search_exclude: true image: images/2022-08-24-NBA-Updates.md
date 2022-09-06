@@ -1,6 +1,7 @@
 ---
 layout: home
 search_exclude: true
+categories: [markdown]
 title: Why the Lakers are the Best NBA Team
 ---
 
