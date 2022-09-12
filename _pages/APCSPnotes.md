@@ -10,7 +10,7 @@ permalink: /notes/
 - Jupyter notebooks permit us to exemplify running code
 - You can utilize markdown to make tables
 - There 3 different loops you can utilize (for loop, while loop, recursive loop)
-
+- Code.org is a simple way to learn and work with Java programming by utilizing blocks
 
 ## How to Enter and Code with wsl:
 
