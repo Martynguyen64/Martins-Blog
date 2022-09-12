@@ -11,5 +11,5 @@ title: Example Markdown Table
 |-|-||-|
 | 1 | Calculus AB | CSP | CSP |
 | 2 | APES | Calculus AB | Bio |
-| 3 | Bio | Ceramics | Calculus BC
-| 4 | Basketball | Off Roll | APES
+| 3 | Bio | Ceramics | Calculus BC |
+| 4 | Basketball | Off Roll | APES |
