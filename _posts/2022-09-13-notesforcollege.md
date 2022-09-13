@@ -63,3 +63,8 @@ used from other sources
 3. Consulting with users is important to develop an effective program
 
 4. Online tools that allow you to work with partners should always be utilized for good programming
+
+---
+# Collaboration Quiz
+![]({{ site.baseurl }}/images/quiz.png "https://github.com/fastai/fastpages")
+
