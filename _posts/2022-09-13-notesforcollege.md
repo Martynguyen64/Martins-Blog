@@ -68,3 +68,8 @@ used from other sources
 # Collaboration Quiz
 ![]({{ site.baseurl }}/images/quiz.png "https://github.com/fastai/fastpages")
 
+---
+# Hacks
+1. My group is set up on common intrest between my gruop memebers. All my gruop memebers including me are willing todo whatever it takes to succeed in the class which I believe will drive us to maek good projects.
+2. We all have different perspectives regarding creativity and different work ethics which I believe combining all of them can lead to a more divese project with good variety.
+3. Yes we are equipped, we all have a good understanding of the class and aren't behind, we all also have a passion for coding and are determined todo whatever it takes to get a good grade. 
