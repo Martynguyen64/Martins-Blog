@@ -2,7 +2,7 @@
 toc: true
 layout: post
 categories: [markdown]
-title: "Psychology and the Good Life" Video
+title: "Psychology and the Good Life"
 ---
 
 # Phsychology and the Good Life
