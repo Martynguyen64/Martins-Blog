@@ -2,7 +2,7 @@
 toc: true
 layout: post
 categories: [markdown]
-title: 10 Insights from "Psychology and the Good Life"
+title: "Psychology and the Good Life" Video
 ---
 
 # Phsychology and the Good Life
