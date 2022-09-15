@@ -14,13 +14,13 @@ There is a common misconception that we are stuck in the current well-being we a
 # Stratergy 2: Controlling yourself is the most challenging in having a good well being
 Taking control of your flow of life is the hardest part of becoming happy. Just learning about psychology won't help you become happy, you must put it into practice. For example to become fit, one must workout regularly and consistently to observe results. Same with your well-being, one must make a change that is consistently affecting your life for the better.
 
-# Insight #5: Social connections are key for happiness
+# Stratergy 3: Social connections are key for happiness
 Nick Eppley and his colleagues at Chicago Business School conducted a study asking people on the subway to stay in a solitary state, a state where one must talk to another the whole ride, or do what ever they want. According to the study, the people who made social connections felt happier than before and those who were solitary felt worse.
 
-# Insight #7: Make time to be gratuitous everyday
+# Stratergy 4: Make time to be gratuitous everyday
 Taking time to be thankful about something everyday can improve one's happiness. Just writing a small note about what you are grateful for can bump up your happiness and well-being. It keeps your mind on positivity instead of negativity and it is good for your well-being.
 
-# Insight #9: Be present in the moment
+# Stratergy 5: Be present in the moment
 Taking time to realize what you are doing and focusing is important for your well-being. People tend to just go through the motions and rush through the day trying to get everything done, but taking a moment to really comprehend what is going on in your day can bump up your well-being.
 
 # Gratitude Note
