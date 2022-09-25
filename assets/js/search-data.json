@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Marty uses JavaScript",
-            "content": "console.log (&quot;Hello World&quot;) . Hello World . Submenu: . | Javascript | Markdown Table | |-|-| .",
+            "content": "console.log (&quot;Hello World&quot;) . Hello World . Submenu: . Javascript Markdown Table . | . .",
             "url": "https://martynguyen64.github.io/Martins-Blog/javascript/2022/09/24/javascript.html",
             "relUrl": "/javascript/2022/09/24/javascript.html",
             "date": " • Sep 24, 2022"
