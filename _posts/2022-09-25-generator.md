@@ -5,7 +5,8 @@ categories: [markdown]
 title: Java NBA Team Generator
 ---
 ## Click the button below and it will generate a random nba team
-
+- One of the 30 NBA eams will pop up
+- Use this for any purpose you want!
 <button name="button" onclick="get_random()">Click for Random NBA team</button>
 <p id="Random NBA Team"></p>
 <script>
