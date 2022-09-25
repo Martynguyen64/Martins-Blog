@@ -2,6 +2,17 @@
   
     
         "post0": {
+            "title": "Java NBA Team Generator",
+            "content": "Click the button below and it will generate a random nba team . Click for Random NBA team . .",
+            "url": "https://martynguyen64.github.io/Martins-Blog/markdown/2022/09/25/generator.html",
+            "relUrl": "/markdown/2022/09/25/generator.html",
+            "date": " • Sep 25, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
             "title": "Python NBA Quiz",
             "content": "import getpass, sys questions = 5 correct = 0 def question_and_answer(prompt, answer): print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) if answer == msg: print(&quot;Correct Answer&quot;) global correct correct+=1 else: print (&quot;Incorrect Answer&quot;) question_and_answer(&quot;What team does Lebron James play for?&quot;, &quot;Lakers&quot;) question_and_answer(&quot;What team does Kevin Durant play for?&quot;, &quot;Nets&quot;) question_and_answer(&quot;What team does Stephen Curry play for?&quot;, &quot;Warriors&quot;) question_and_answer(&quot;Who won the 2022 NBA Championship?&quot;, &quot;Warriors&quot;) question_and_answer(&quot;Who is the G.O.A.T?&quot;, &quot;Michael Jordan&quot;) print(correct, &quot;Answers correct&quot;) . Question: What team does Lebron James play for? Answer: Lakers Correct Answer Question: What team does Kevin Durant play for? Answer: Nets Correct Answer Question: What team does Stephen Curry play for? Answer: Warriors Correct Answer Question: Who won the 2022 NBA Championship? Answer: Warriors Correct Answer Question: Who is the G.O.A.T? Answer: Michael Jordan Correct Answer 5 Answers correct .",
             "url": "https://martynguyen64.github.io/Martins-Blog/python/2022/09/24/quizzes23.html",
@@ -12,22 +23,11 @@
     
   
     
-        ,"post1": {
+        ,"post2": {
             "title": "Marty uses JavaScript",
             "content": "console.log (&quot;Hello World&quot;) . Hello World . Submenu: . Javascript Markdown Table . | . .",
             "url": "https://martynguyen64.github.io/Martins-Blog/javascript/2022/09/24/javascript.html",
             "relUrl": "/javascript/2022/09/24/javascript.html",
-            "date": " • Sep 24, 2022"
-        }
-        
-    
-  
-    
-        ,"post2": {
-            "title": "Random Java NBA Team Generator",
-            "content": "Click the button below and it will generate a random nba team . &lt;button name=&quot;button&quot; onclick=&quot;getrandom()&quot;&gt;Click for Random NBA team&lt;/button&gt; function get_random (list) { return list[Math.floor((Math.random()*list.length))]; } get_random([&quot;Lakers&quot;, &quot;Clippers&quot;, &quot;Warriors&quot;, &quot;Kings&quot;, &quot;Knicks&quot;, &quot;Nets&quot;, &quot;Bucks&quot;, &quot;Cavs&quot;, &quot;Bulls&quot;, &quot;Hawks&quot;, &quot;Celtics&quot;, &quot;Pistons&quot;, &quot;Suns&quot;, &quot;Heat&quot;, &quot;Jazz&quot; ]) .",
-            "url": "https://martynguyen64.github.io/Martins-Blog/javascript/2022/09/24/geenrastor.html",
-            "relUrl": "/javascript/2022/09/24/geenrastor.html",
             "date": " • Sep 24, 2022"
         }
         
