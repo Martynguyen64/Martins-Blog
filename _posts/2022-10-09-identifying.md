@@ -32,3 +32,4 @@ title: "Identifying and Correcting Errors (Unit 1.4)"
 - Takeaway: Identify inputs and intended outputs by testing the program
 
 # Quiz MC
+![]({{ site.baseurl }}/images/identifying.png "https://github.com/fastai/fastpages")
