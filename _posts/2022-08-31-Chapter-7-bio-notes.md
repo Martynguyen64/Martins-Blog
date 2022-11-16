@@ -1,9 +1,6 @@
 ---
 layout: post
 ---
----
-layout: post
----
 Natural Selection
 
   - > Differential Repoductive Success is natural selection
