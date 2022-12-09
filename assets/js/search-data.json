@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "3.9 and 3.11 Hacks",
-            "content": "Required Hack: . import random numList = [] number = 0 for i in range(3): numList.append(random.randint(1, 20)) print(&quot;Number&quot;, str(i+1),&quot;is &quot;, str(numList[i])) if(numList[i] &gt; number): number = numList[i] print(str(number)) . Number 1 is 10 Number 2 is 4 Number 3 is 14 14 .",
+            "content": "import random numList = [] number = 0 for i in range(3): numList.append(random.randint(1, 20)) print(&quot;Number&quot;, str(i+1),&quot;is &quot;, str(numList[i])) if(numList[i] &gt; number): number = numList[i] print(str(number)) . Number 1 is 10 Number 2 is 4 Number 3 is 14 14 .",
             "url": "https://martynguyen64.github.io/Martins-Blog/2022/12/09/hacks4.html",
             "relUrl": "/2022/12/09/hacks4.html",
             "date": " • Dec 9, 2022"
