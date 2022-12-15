@@ -5,7 +5,7 @@
     
         "post1": {
             "title": "3.16 Hacks",
-            "content": "import random # Roll a six-sided dice and return the result def roll_dice(): return random.randint(1, 6) # Prompt the user for the number of dice rolls num_rolls = int(input(&quot;Enter the number of times you want to roll the dice: &quot;)) # Simulate rolling the dice the specified number of times and print the results for i in range(num_rolls): result = roll_dice() print(f&quot;Roll {i + 1}: {result}&quot;) . Roll 1: 6 Roll 2: 5 Roll 3: 3 Roll 4: 1 Roll 5: 5 Roll 6: 5 Roll 7: 5 Roll 8: 3 Roll 9: 6 Roll 10: 3 .",
+            "content": "import random # Roll a six-sided dice and return the result def roll_dice(): return random.randint(1, 6) # Prompt the user for the number of dice rolls num_rolls = int(input(&quot;Enter the number of times you want to roll the dice: &quot;)) # Simulate rolling the dice the specified number of times and print the results for i in range(num_rolls): result = roll_dice() print(f&quot;Roll {i + 1}: {result}&quot;) . Roll 1: 6 Roll 2: 5 Roll 3: 3 Roll 4: 1 Roll 5: 5 Roll 6: 5 Roll 7: 5 Roll 8: 3 Roll 9: 6 Roll 10: 3 . name = input(&quot;What is your name? &quot;) age = int(input(&quot;What is your age? &quot;)) # Calculate the user&#39;s age in dog years dog_years = age * 7 # Output the result print(&quot;Hi, &quot;, name, &quot;! You are &quot;, dog_years, &quot; years old in dog years.&quot;) . Hi, Martin ! You are 98 years old in dog years. .",
             "url": "https://martynguyen64.github.io/Martins-Blog/2022/12/15/hacks7.html",
             "relUrl": "/2022/12/15/hacks7.html",
             "date": " • Dec 15, 2022"
