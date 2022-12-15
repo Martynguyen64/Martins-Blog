@@ -4,9 +4,9 @@
         "post0": {
             "title": "Python NBA Quiz",
             "content": "import getpass, sys questions = 5 correct = 0 def question_and_answer(prompt, answer): print(&quot;Question: &quot; + prompt) msg = input() print(&quot;Answer: &quot; + msg) if answer == msg: print(&quot;Correct Answer&quot;) global correct correct+=1 else: print (&quot;Incorrect Answer&quot;) question_and_answer(&quot;What team does Lebron James play for?&quot;, &quot;Lakers&quot;) question_and_answer(&quot;What team does Kevin Durant play for?&quot;, &quot;Nets&quot;) question_and_answer(&quot;What team does Stephen Curry play for?&quot;, &quot;Warriors&quot;) question_and_answer(&quot;Who won the 2022 NBA Championship?&quot;, &quot;Warriors&quot;) question_and_answer(&quot;Who is the G.O.A.T?&quot;, &quot;Michael Jordan&quot;) print(correct, &quot;Answers correct&quot;) . Question: What team does Lebron James play for? Answer: Lakers Correct Answer Question: What team does Kevin Durant play for? Answer: Nets Correct Answer Question: What team does Stephen Curry play for? Answer: Warriors Correct Answer Question: Who won the 2022 NBA Championship? Answer: Warriors Correct Answer Question: Who is the G.O.A.T? Answer: Michael Jordan Correct Answer 5 Answers correct .",
-            "url": "https://martynguyen64.github.io/Martins-Blog/python/2022/12/13/quizzes23.html",
-            "relUrl": "/python/2022/12/13/quizzes23.html",
-            "date": " • Dec 13, 2022"
+            "url": "https://martynguyen64.github.io/Martins-Blog/python/2022/12/14/quizzes23.html",
+            "relUrl": "/python/2022/12/14/quizzes23.html",
+            "date": " • Dec 14, 2022"
         }
         
     
@@ -15,9 +15,20 @@
         ,"post1": {
             "title": "Marty uses JavaScript",
             "content": "console.log (&quot;Hello World&quot;) . Hello World . JavaScript Usage | Java NBA Generator | . .",
-            "url": "https://martynguyen64.github.io/Martins-Blog/javascript/2022/12/13/javascript.html",
-            "relUrl": "/javascript/2022/12/13/javascript.html",
-            "date": " • Dec 13, 2022"
+            "url": "https://martynguyen64.github.io/Martins-Blog/javascript/2022/12/14/javascript.html",
+            "relUrl": "/javascript/2022/12/14/javascript.html",
+            "date": " • Dec 14, 2022"
+        }
+        
+    
+  
+    
+        ,"post2": {
+            "title": "Chapter 7 Bio Notes",
+            "content": "Natural Selection . Differential Repoductive Success is natural selection . | If you have a higher fitness level, higher survivability . Higher fitness pass on genes, lower fitness die . | . | Evolution creates new alleials . | Gene pool is a combination of all genes in population . | Mutation and reproduction create variety . Adaptation is from these two . | . | Hardy Weinberg Equilibrium . 1848 . p^2 + 2pq + q^2 = l . | DD Dd dd . | q^2 = .98 . Q = .99 . | . | . | 1895 . q^2 = .05 . Q = .22 . | . | . | . | Adaptation Process . Adapt to environment through natural selection to exploit niches . | They work their way up the ecosystem . | Species are created as traits are formed from adaptions to the enviroment . | . | .",
+            "url": "https://martynguyen64.github.io/Martins-Blog/2022/12/14/Chapter-7-bio-notes.html",
+            "relUrl": "/2022/12/14/Chapter-7-bio-notes.html",
+            "date": " • Dec 14, 2022"
         }
         
     
@@ -25,7 +36,7 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "3.14 and 3.15 Hacks",
             "content": "import random def generate_random_numbers(n): # Create empty lists for even and odd numbers even_numbers = [] odd_numbers = [] # Generate n random numbers for i in range(n): # Generate a random number between 1 and 100 number = random.randint(1, 100) # If the number is even, add it to the list of even numbers if number % 2 == 0: even_numbers.append(number) # If the number is odd, add it to the list of odd numbers else: odd_numbers.append(number) # Return the lists of even and odd numbers return even_numbers, odd_numbers # Generate 10 random numbers even_numbers, odd_numbers = generate_random_numbers(10) # Print the lists of even and odd numbers print(&quot;Even numbers:&quot;, even_numbers) print(&quot;Odd numbers:&quot;, odd_numbers) . Even numbers: [80, 10, 42, 32] Odd numbers: [37, 33, 79, 61, 77, 97] . import numpy as np # Create a NumPy polynomial object representing the function # 2x^5 - 6x^2 + 24x poly = np.poly1d([2, 0, -6, 24, 0]) # Find the derivative of the polynomial derivative = np.polyder(poly) # Print the derivative print(derivative) . import numpy as np # Create a NumPy polynomial object representing the function # (13x^4 + 4x^2) / 2 poly = np.poly1d([13, 0, 4, 0, 0], True) # Find the derivative of the polynomial derivative = np.polyder(poly) # Evaluate the derivative at x = 9 derivative_at_9 = derivative(9) # Print the derivative at x = 9 print(derivative_at_9) . animals = [&quot;dog&quot; for _ in range(10)] + [&quot;cat&quot; for _ in range(10)] # Use the random.shuffle() function to shuffle the list in place import random random.shuffle(animals) # Print the shuffled list of animals print(animals) . [&#39;cat&#39;, &#39;dog&#39;, &#39;cat&#39;, &#39;cat&#39;, &#39;dog&#39;, &#39;cat&#39;, &#39;dog&#39;, &#39;dog&#39;, &#39;dog&#39;, &#39;cat&#39;, &#39;dog&#39;, &#39;cat&#39;, &#39;cat&#39;, &#39;dog&#39;, &#39;cat&#39;, &#39;cat&#39;, &#39;dog&#39;, &#39;dog&#39;, &#39;dog&#39;, &#39;cat&#39;] . This code will generate a list of 20 animals (10 dogs and 10 cats) and then use the random.shuffle() function from the Python random module to shuffle the list in place, resulting in a random order for the animals. .",
             "url": "https://martynguyen64.github.io/Martins-Blog/2022/12/13/hacks6.html",
@@ -35,17 +46,6 @@
         
     
   
-    
-  
-    
-        ,"post5": {
-            "title": "Chapter 7 Bio Notes",
-            "content": "Natural Selection . Differential Repoductive Success is natural selection . | If you have a higher fitness level, higher survivability . Higher fitness pass on genes, lower fitness die . | . | Evolution creates new alleials . | Gene pool is a combination of all genes in population . | Mutation and reproduction create variety . Adaptation is from these two . | . | Hardy Weinberg Equilibrium . 1848 . p^2 + 2pq + q^2 = l . | DD Dd dd . | q^2 = .98 . Q = .99 . | . | . | 1895 . q^2 = .05 . Q = .22 . | . | . | . | Adaptation Process . Adapt to environment through natural selection to exploit niches . | They work their way up the ecosystem . | Species are created as traits are formed from adaptions to the enviroment . | . | .",
-            "url": "https://martynguyen64.github.io/Martins-Blog/2022/12/13/Chapter-7-bio-notes.html",
-            "relUrl": "/2022/12/13/Chapter-7-bio-notes.html",
-            "date": " • Dec 13, 2022"
-        }
-        
     
   
     
