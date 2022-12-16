@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -175,12 +175,12 @@ window.onload = wrap_img;
 </h3>
 <ul>
 <li>The ability of an algorithm to solve a problem in an efficient way<ul>
-<li>An efficient algorithm solves a problem <strong>___</strong> and with a <strong><strong><strong>_</strong></strong></strong>, such as time and memory.</li>
+<li>An efficient algorithm solves a problem <em>quickly</em> and with a <em>minimum amount of resources</em>, such as time and memory.</li>
 </ul>
 </li>
 <li>How do we determine if an algorithm is efficient or not?<ul>
-<li>One way we can do this is by determining the <strong><strong>_</strong></strong> of the algorithm.</li>
-<li>Another way is through <strong><strong>_</strong></strong>. </li>
+<li>One way we can do this is by determining the <em>time complexity</em> of the algorithm.</li>
+<li>Another way is through <em>space complexity</em>. </li>
 </ul>
 </li>
 </ul>
@@ -196,7 +196,7 @@ window.onload = wrap_img;
 </h2>
 <p>What did you and your team discuss? (record below)</p>
 <ul>
-<li>An <strong><em>__</em></strong> solution is <strong><strong><strong><strong>__</strong></strong></strong></strong> that produces a solution that isn't necessarily <strong>_</strong> but can be used when normal methods take forever </li>
+<li>An <em>geyrustuc</em> solution is <em>an approach to a problem</em> that produces a solution that isn't necessarily <em>optimal</em> but can be used when normal methods take forever </li>
 </ul>
 <p>Describe the method used to solve the traveling merchant problem. (record below)</p>
 
@@ -227,8 +227,8 @@ There are two types of decision problems that Collegeboard goes over:</p>
 <li>Decidable Problems</li>
 <li>Undecidable Problems</li>
 </ul>
-<p>A <strong><em>__</em></strong> is a problem in computer science and mathematics for which an algorithm can be created that can always produce a correct answer or solution. In other words, a decidable problem is a problem for which there exists an algorithm that can be used to determine whether a given input is a valid solution or not.</p>
-<p>An <strong><em>__</em></strong> problem is a problem in computer science and mathematics for which it is impossible to create an algorithm that can always provide a correct answer or solution. This means that it is not possible for an algorithm to always determine whether a given input is a valid solution to an undecidable problem.</p>
+<p>A <em>decidable</em> is a problem in computer science and mathematics for which an algorithm can be created that can always produce a correct answer or solution. In other words, a decidable problem is a problem for which there exists an algorithm that can be used to determine whether a given input is a valid solution or not.</p>
+<p>An <em>undecidable</em> problem is a problem in computer science and mathematics for which it is impossible to create an algorithm that can always provide a correct answer or solution. This means that it is not possible for an algorithm to always determine whether a given input is a valid solution to an undecidable problem.</p>
 </blockquote>
 
 </div>
@@ -351,9 +351,9 @@ False
 <h3 id="The-Halting-Problem">
 <a class="anchor" href="#The-Halting-Problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Halting Problem<a class="anchor-link" href="#The-Halting-Problem"> </a>
 </h3>
-<p>The halting problem is an example of an <strong><em>__</em></strong>. It states that it is not always possible to correctly determine whether a code halts or runs forever.</p>
+<p>The halting problem is an example of an <em>undecidable problem</em>. It states that it is not always possible to correctly determine whether a code halts or runs forever.</p>
 <blockquote>
-<p>There is <strong><em>__</em></strong> to write an algorithm to analyze and determine whether a body of code can run forever or not.</p>
+<p>There is <em>no way</em> to write an algorithm to analyze and determine whether a body of code can run forever or not.</p>
 </blockquote>
 
 </div>
@@ -368,8 +368,8 @@ False
 <ul>
 <li>In order to understand this, suppose that an algorithm was able to analyze whether a code halts or not. Let's call this algorithm <code>HaltChecker</code>.</li>
 <li>
-<code>HaltChecker</code> analyzes the program,<code>program P</code>, and its input,<code>input I</code>. If <code>program P</code> halts with <code>input I</code>, <code>HaltChecker</code> returns an output of "halts". If <code>program P</code> doesn't halt(runs forever) with <code>input I</code>, <code>HaltChecker</code> returns an output of "never". For example, in the code where it tests if variable <strong>number</strong>, the <strong><em>__</em></strong>, so <code>HaltChecker</code> returns an output of <strong><em>__</em></strong>.</li>
-<li>Then, we add another algorithm called <code>Reverser</code> which reverses <code>HaltChecker</code>'s output. So, if "never" is the output of <code>HaltChecker</code>, then the output of <code>Reverser</code> is <strong><em>__</em></strong>. It's also the same the other way around: if <code>HaltChecker</code> has an output of "halts", then <code>Reverser</code> has an output of <strong><em>__</em></strong>.</li>
+<code>HaltChecker</code> analyzes the program,<code>program P</code>, and its input,<code>input I</code>. If <code>program P</code> halts with <code>input I</code>, <code>HaltChecker</code> returns an output of "halts". If <code>program P</code> doesn't halt(runs forever) with <code>input I</code>, <code>HaltChecker</code> returns an output of "never". For example, in the code where it tests if variable <strong>number</strong>, the <em>code runs forever</em>, so <code>HaltChecker</code> returns an output of <em>"never"</em>.</li>
+<li>Then, we add another algorithm called <code>Reverser</code> which reverses <code>HaltChecker</code>'s output. So, if "never" is the output of <code>HaltChecker</code>, then the output of <code>Reverser</code> is <em>"halts"</em>. It's also the same the other way around: if <code>HaltChecker</code> has an output of "halts", then <code>Reverser</code> has an output of <em>"never"</em>.</li>
 <li>We combine these algorithms into one entire body of code.</li>
 <li><strong>Since <code>Reverser</code> is the algorithm at the end, hence giving the ultimate output, notice how it prints "never" when in fact there is an end(As proved by <code>HaltChecker</code>), and how it also prints "halts" when there is in fact is no end to the code(Also proved by <code>HaltChecker</code>). As a result, <code>HaltChecker</code> is inaccurate and this is an undecidable problem.</strong></li>
 </ul>
@@ -539,6 +539,101 @@ False
 <h5 id="Homeworks,-hacks,-and-classwork(filled-in-blanks)-for-both-3.17-and-3.18-are-due-on-Thursday-at-9:00-pm.--0.1-points-for-each-day-late.">
 <a class="anchor" href="#Homeworks,-hacks,-and-classwork(filled-in-blanks)-for-both-3.17-and-3.18-are-due-on-Thursday-at-9:00-pm.--0.1-points-for-each-day-late." aria-hidden="true"><span class="octicon octicon-link"></span></a>Homeworks, hacks, and classwork(filled in blanks) for both 3.17 and 3.18 are due on Thursday at 9:00 pm. -0.1 points for each day late.<a class="anchor-link" href="#Homeworks,-hacks,-and-classwork(filled-in-blanks)-for-both-3.17-and-3.18-are-due-on-Thursday-at-9:00-pm.--0.1-points-for-each-day-late."> </a>
 </h5>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_max</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="c1"># Set the initial maximum value to the first element in the list</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="c1"># Iterate through the rest of the list</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>
+        <span class="c1"># If the current element is greater than the maximum value, set the maximum value to the current element</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">max_val</span><span class="p">:</span>
+            <span class="n">max_val</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="c1"># Return the maximum value</span>
+    <span class="k">return</span> <span class="n">max_val</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>    <span class="n">find_max</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here's an algorithm that solves the "find the maximum element in a list" problem:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This will cause the computer to enter an infinite loop and continue running indefinitely. Be careful when using this code, as it can be difficult to stop the program once it starts running.</p>
+
 </div>
 </div>
 </div>
