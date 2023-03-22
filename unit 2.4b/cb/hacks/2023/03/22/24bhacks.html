@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      14 min read
+      7 min read
     
 </span></p>
 
@@ -130,32 +130,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#Debugging-Example">Debugging Example </a></li>
-<li class="toc-entry toc-h2"><a href="#Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db </a></li>
-<li class="toc-entry toc-h2"><a href="#Create">Create </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#Read">Read </a></li>
-<li class="toc-entry toc-h2"><a href="#Reading-Users-table-in-Sqlite.db">Reading Users table in Sqlite.db </a></li>
-<li class="toc-entry toc-h2"><a href="#Update">Update </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Updating-a-User-in-table-in-Sqlite.db">Updating a User in table in Sqlite.db </a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#Delete">Delete </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Delete-a-User-in-table-in-Sqlite.db">Delete a User in table in Sqlite.db </a></li>
 <li class="toc-entry toc-h2"><a href="#CRUD-Menu">CRUD Menu </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Menu-Interface-to-CRUD-operations">Menu Interface to CRUD operations </a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul><!--
@@ -167,70 +144,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Hacks">
-<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
-</h1>
-<ul>
-<li>
-<p>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</p>
-</li>
-<li>
-<p>In this implementation, do you see procedural abstraction?</p>
-</li>
-</ul>
-<p>Procedural abstraction is displayed in this implementation through the division of tasks among various functions. For example, the menu function acts as a control method where the user can select what operation they want to complete. The create() function follows this, prompting the user for the necessary details, and then establishing a cursor object to connect with the database. After executing the appropriate SQL command to insert the data, the connection and cursor objects are closed. Therefore, the entire process of creating a user record is conducted by calling the create() function. This is an example of procedural abstraction, as there is a specific function dedicated to each task and the user can complete the desired operation by using the menu function.</p>
-<ul>
-<li>
-<p>In 2.4a or 2.4b lecture</p>
-<ul>
-<li>Do you see data abstraction?  Complement this with Debugging example.</li>
-</ul>
-<p>This implementation showcases data abstraction, as the details of working with the database are kept hidden from the user. They are provided with a simple interface to perform common CRUD (Create, Read, Update, Delete) operations on their data. This is done through a menu system, which provides an abstraction of the operations available and hides the implementation details from the user. As an example of this, when the user select the "create" option from the menu, they are prompted to input the required information (name, uid, password, dob). The implementation then automatically takes care of inserting this information into the database.</p>
-</li>
-</ul>
-<h2 id="Debugging-Example">
-<a class="anchor" href="#Debugging-Example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Debugging Example<a class="anchor-link" href="#Debugging-Example"> </a>
-</h2>
-<ul>
-<li>In the example below, I am running the READ operation, when debugging it highlights the specific section of the code that is being executed when running this operation. This allows me to know if my code is running properly, or points me in the right direction if my code does not work as intended - because it lays out how my code is ACTUALLY running.</li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/109186517/226302658-9f781145-4c71-4f2a-90f3-843fa25c41ef.png" alt="debug1"></p>
-<ul>
-<li>In the second example below, I have input the details for a new car record to be added to the database (cars.db). On the top left corner, you can see the new information for each attribute such as "body_type" or "make" being created for the car. </li>
-</ul>
-<p><img src="https://user-images.githubusercontent.com/109186517/226304068-c7473588-293a-4d69-a1ea-c87181f9c42c.png" alt="debug2"></p>
-<ul>
-<li>Use Imperative or OOP style to Create a new Table or do something that applies to your CPT project.</li>
-</ul>
-<h2 id="Schema-of-Users-table-in-Sqlite.db">
-<a class="anchor" href="#Schema-of-Users-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schema of Users table in Sqlite.db<a class="anchor-link" href="#Schema-of-Users-table-in-Sqlite.db"> </a>
-</h2>
-<blockquote>
-<p>Uses PRAGMA statement to read schema.</p>
-</blockquote>
-<ol>
-<li>What is a database schema?</li>
-</ol>
-<p>A database schema is the structure of a database system, which describes the objects (tables, views, procedures, functions, etc.) and relationships between them.</p>
-<ol>
-<li>What is the purpose of identity Column in SQL database?</li>
-</ol>
-<p>The purpose of an identity column in a SQL database is to provide an auto-incremental, unique number for each row in a table. This allows the database to generate a unique identifier for each row.</p>
-<ol>
-<li>What is the purpose of a primary key in SQL database?</li>
-</ol>
-<p>The purpose of a primary key in a SQL database is to uniquely identify each record in a table. A primary key is composed of one or more columns, which must contain unique values.</p>
-<ol>
-<li>What are the Data Types in SQL table?</li>
-</ol>
-<p>The data types in a SQL table can vary depending on the type of database being used, but the most common data types are integer, decimal, string, date, and boolean.</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -292,30 +205,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create">
-<a class="anchor" href="#Create" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create<a class="anchor-link" href="#Create"> </a>
-</h2>
-<h3 id="Create-a-new-User-in-table-in-Sqlite.db">
-<a class="anchor" href="#Create-a-new-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a new User in table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-table-in-Sqlite.db"> </a>
-</h3>
-<blockquote>
-<p>Uses SQL INSERT to add row</p>
-</blockquote>
-<ol>
-<li>Compare create() in both SQL lessons. What is better or worse in the two implementations?</li>
-</ol>
-<p>In the OOP, the create() function is called on an object. On the other hand, in imperative programming, several variables need to be created within the function instead. Both of these approaches have their own advantages and disadvantages. The imperative approach is less prone to errors but also less efficient, whereas the create() in the OOP version does the opposite. Furthermore, the imperative version does not censor passwords whereas OOP is better for working with large amounts of data. If one is dealing with a small amount of data, then the imperative approach may be more suitable.</p>
-<ol>
-<li>Explain purpose of SQL INSERT. Is this the same as User init?</li>
-</ol>
-<p>The SQL INSERT statement used in the code is used to add a new row of data to the "users" table of a SQLite database. The INSERT INTO statement defines the table name and columns for the data to be added, and the VALUES clause provides the values associated with each column. The ? placeholders help prevent SQL injection attacks by cleaning user input. The INSERT INTO statement can be likened to the init method of a User class, as they both serve to create a record or object within the database. The distinction is that the INSERT INTO statement only adds data to a table in the database, while the init method of a User class creates a new instance of a class in memory.</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -383,38 +272,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Read">
-<a class="anchor" href="#Read" aria-hidden="true"><span class="octicon octicon-link"></span></a>Read<a class="anchor-link" href="#Read"> </a>
-</h2>
-<h2 id="Reading-Users-table-in-Sqlite.db">
-<a class="anchor" href="#Reading-Users-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading Users table in Sqlite.db<a class="anchor-link" href="#Reading-Users-table-in-Sqlite.db"> </a>
-</h2>
-<blockquote>
-<p>Uses SQL SELECT statement to read data</p>
-</blockquote>
-<ol>
-<li>What is a connection object? After you google it, what do you think it does?</li>
-</ol>
-<p>A connection object is an object used to establish a connection between a database and an application. It allows the application to interact with the database by executing queries, retrieving data, and performing other database operations.</p>
-<ol>
-<li>Same for cursor object?</li>
-</ol>
-<p>A cursor object is an object used to traverse the records in a database result set. It provides methods to retrieve and manipulate the results of a query.</p>
-<ol>
-<li>Look at conn object and cursor object in VSCode debugger. What attributes are in the object?</li>
-</ol>
-<p>The conn object contains attributes such as hostname, port, database, user, and password, while the cursor object contains attributes such as description and rowcount.</p>
-<ol>
-<li>Is "results" an object? How do you know?</li>
-</ol>
-<p>Yes, "results" can be classified as an object as it is not only identified as a local variable, but it also stores data which is required for the program to work. This data includes the name, user id and date of birth of each user."</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -475,36 +332,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Update">
-<a class="anchor" href="#Update" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update<a class="anchor-link" href="#Update"> </a>
-</h2>
-<h3 id="Updating-a-User-in-table-in-Sqlite.db">
-<a class="anchor" href="#Updating-a-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updating a User in table in Sqlite.db<a class="anchor-link" href="#Updating-a-User-in-table-in-Sqlite.db"> </a>
-</h3>
-<blockquote>
-<p>Uses SQL UPDATE to modify password</p>
-</blockquote>
-<ol>
-<li>
-<p>What does the hacked part do?
-The section of code that includes the term "hacked" is used to create a password that meets the minimum length requirement for safety reasons (2 characters). The message variable has been set to "hacked" to make it clear that the password has been auto-generated.</p>
-</li>
-<li>
-<p>Explain try/except, when would except occur?</p>
-</li>
-</ol>
-<p>If any errors occur while trying to execute an SQL command, the try/except block can be used to handle them. In this situation, the try block holds the SQL command to change the user's password. If any sqlite3.Error exceptions take place, the code in the except block is implemented.</p>
-<ol>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
-</ol>
-<p>In order to execute SQL commands, it is necessary to create a connection to the database. This connection is represented by a cursor object, which is used to interact with the database. This connection and cursor object must be established for each example, as it is a crucial component of processing SQL commands. At the end, the cursor and connection objects must be closed in order to free up resources and avoid any memory issues.</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -578,30 +405,6 @@ The section of code that includes the term "hacked" is used to create a password
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Delete">
-<a class="anchor" href="#Delete" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete<a class="anchor-link" href="#Delete"> </a>
-</h1>
-<h3 id="Delete-a-User-in-table-in-Sqlite.db">
-<a class="anchor" href="#Delete-a-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete a User in table in Sqlite.db<a class="anchor-link" href="#Delete-a-User-in-table-in-Sqlite.db"> </a>
-</h3>
-<blockquote>
-<p>Uses a delete function to remove a user based on a user input of the id.</p>
-</blockquote>
-<ol>
-<li>Is DELETE a dangerous operation? Why?</li>
-</ol>
-<p>Yes, delete is a dangerous operation because it permanently removes a record from a database, so it should be handled with care.</p>
-<ol>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
-</ol>
-<p>The "f" in the print statement is a format specifier, which defines the type of data being printed. The {uid} refers to the user id of the user being deleted, which is passed in as a parameter.</p>
-
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
