@@ -127,7 +127,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Why-SASS?">Why SASS?<a class="anchor-link" href="#Why-SASS?"> </a></h1><p>SASS is an improvement on CSS in that there are methods of abstraction. It is a stylesheet language that is compiled into CSS, which means that Sass will translate the Sass code you wrote into CSS, which is what your web browser can read.</p>
+<h1 id="Why-SASS?">Why SASS?<a class="anchor-link" href="#Why-SASS?"> </a></h1><p>SASS is an improvement on CSS in that there are methods of abstraction. It is a stylesheet language that is compiled into CSS, which means that SSass will translate the Sass code you wrote into CSS, which is what your web browser can read.</p>
 <h1 id="SASS-vs-SCSS">SASS vs SCSS<a class="anchor-link" href="#SASS-vs-SCSS"> </a></h1><p>As you learn about Sass, you might notice something called Scss. They are basically the same thing except that Scss uses curly braces and semicolons to distinguish between lines. Sass uses indentation and newlines instead.</p>
 <p>We will be teaching the Scss syntax because it is more commonly used.</p>
 
@@ -149,46 +149,48 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Nesting">Nesting<a class="anchor-link" href="#Nesting"> </a></h1><p>Nesting in CSP (Content Security Policy) refers to the ability to specify a policy for a specific resource or set of resources that are loaded within another resource. For example, if you have an iframe on your website that loads content from another domain, you can use CSP to restrict the types of content that can be loaded within that iframe. This is done by specifying a policy for the parent resource (your website) that applies to any nested resources (the content loaded in the iframe).</p>
+<h1 id="Nesting">Nesting<a class="anchor-link" href="#Nesting"> </a></h1><ul>
+<li>Selectors share the same element in CSS</li>
+<li><p>CSS:
+```
+.font .title {</p>
+<p>font-family: "Times New Roman", serif;</p>
+<p>font-size: 3em;</p>
+</li>
+</ul>
+<p>}</p>
+<p>.font .text {</p>
+
+<pre><code>font-family: "Times New Roman", serif; 
+
+font-size: 1em;
+
+</code></pre>
+<p>}</p>
+
+<pre><code>- SASS equivalent:</code></pre>
+<p>.font {</p>
+
+<pre><code>.title {
+
+font-family: "Times New Roman", serif;
+
+font-size: 3em;
+
+.text {
+
+font-family: "Times New Roman", serif;
+
+font-size: 1em;/div&gt;
+
+</code></pre>
+<p>}
+```</p>
 <ul>
-<li>In CSS, multiple selectors may be linked to the same element.</li>
-<li>This can make the code more complex and harder to read.</li>
-<li>SASS has a nesting feature that helps organize CSS code in a way that reflects the HTML hierarchy.</li>
-<li>With SASS nesting, you can group the font-size and font-family properties under the .title and .text classes within the .font class.</li>
-<li>This makes the code more readable and easier to understand, especially when dealing with complex CSS rules.</li>
+<li>SASS nesting allows you to wrtie styling code in a way that looks like HTML hierachy</li>
+<li>Decrease repitition</li>
 </ul>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To illustrate, the CSS code above can be rewritten in SASS as shown below:</p>
-<p>.font {
-.title {
-font-family: "Times New Roman", serif;
-font-size: 3em;
-}
-.text {
-font-family: "Times New Roman", serif;
-font-size: 1em;
-}
-}</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The resulting HTML code for the SASS code above would be:</p>
-<div class="font">
-    <div class="title">
-        <p>Title</p>
-    </div>
-    <div class="text">
-        <p>This is some text</p>
-    </div>
-</div>
 </div>
 </div>
 </div>
@@ -203,20 +205,16 @@ font-size: 1em;
 .a .c {
     color: blue;
 }</code></pre>
+<p>SASS Equivalent:</p>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="SASS-Equivalent">SASS Equivalent<a class="anchor-link" href="#SASS-Equivalent"> </a></h2><p>.a {
-  .b {
+<pre><code>.a {
+    .b {
     color: green;
-  }</p>
-<p>.c {
+    }
+    .c {
     color: blue;
-  }
-}</p>
+    }
+}</code></pre>
 
 </div>
 </div>
@@ -233,32 +231,49 @@ font-size: 1em;
 <li>Different width based on length of text</li>
 </ul>
 <p>To reuse a portion of CSS code in multiple selectors:</p>
-<p>CSS: copy paste code each time
-SASS: @extend to inherit the code</p>
-<p>For example, %buttonLayout placeholder class, being a template for buttons ``` %buttonLayout {</p>
+<ul>
+<li>CSS: copy paste code each time</li>
+<li><p>SASS: @extend to inherit the code</p>
+</li>
+<li><p>For example, %buttonLayout placeholder class, being a template for buttons
+```
+%buttonLayout {</p>
 <p>width: 15em;</p>
 <p>height: 15em;</p>
 <p>color: #ffffff;</p>
 <p>margin-right: 10%;</p>
-<p>}</p>
-<ul>
-<li>Selector create for each button with @extend %class-name
-.gettingStartedButton, .nestingButton, .extendButton {</li>
+</li>
 </ul>
-<p>@extend %buttonLayout;</p>
 <p>}</p>
-<ul>
-<li>Different background color, each one unique
-.gettingStartedButton {</li>
-</ul>
-<p>background: radial-gradient( #1539db, #8a8ce6);</p>
+
+<pre><code>- Selector create for each button with @extend %class-name</code></pre>
+<p>.gettingStartedButton, .nestingButton, .extendButton {</p>
+
+<pre><code>@extend %buttonLayout;
+
+</code></pre>
+<p>}</p>
+
+<pre><code>- Different background color, each one unique</code></pre>
+<p>.gettingStartedButton {</p>
+
+<pre><code>background: radial-gradient( #1539db, #8a8ce6);
+
+</code></pre>
 <p>}</p>
 <p>.nestingButton {</p>
-<p>background: radial-gradient( #3a9fa7, #8ae0e6);</p>
+
+<pre><code>background: radial-gradient( #3a9fa7, #8ae0e6);
+
+</code></pre>
 <p>}</p>
 <p>.extendButton {</p>
-<p>background: radial-gradient( #643aa7, #d78ae6);</p>
-<p>} ```</p>
+
+<pre><code>background: radial-gradient( #643aa7, #d78ae6);
+
+</code></pre>
+<p>}
+```</p>
 
 </div>
 </div>
@@ -266,34 +281,42 @@ SASS: @extend to inherit the code</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Mixin">Mixin<a class="anchor-link" href="#Mixin"> </a></h1><ul>
-<li>Buttons' backgrounds can be coded using the "background: radial-gradient()" property.</li>
-<li>To code backgrounds in a different way, you can use a mixin, which is like a code template that can be customized with parameters to create unique and dynamic styles.</li>
-<li>A mixin is similar to the "extend" property, and it allows you to reuse code with the ability to take in parameters and style elements uniquely.</li>
-<li>In SASS, you can create a mixin using the "@mixin" rule and passing in parameters, such as two colors, which can be used to set the inner and outer colors of the radial gradient. For example:</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Call mixing with @include after creating selector
-.gettingStartedButton {</li>
-</ul>
-<p>@include buttonLayout(#1539db, #8a8ce6);</p>
-<p>}</p>
-<ul>
-<li>Styling rules that don't take in variables wiithin mixin
-@mixin buttonLayout($innerColor, $outerColor) {</li>
-</ul>
+<li>Background of buttons coded with background: radial-gradient();</li>
+<li>Another way to code background is use of a mixin</li>
+<li>Similar to extend, creating code template to be reused with ability to take in parameters so you can style uniquely and dynamically</li>
+<li><p>SASS, @mixin rule taking in two colors as parameters
+```
+@mixin buttonLayout($innerColor, $outerColor) {</p>
 <p>background: radial-gradient($innerColor, $outerColor);</p>
-<p>width: 15em;</p>
-<p>height: 15em;</p>
-<p>color: #ffffff;</p>
-<p>margin-right: 10%;</p>
-<p>border-radius: 2em;
-} ```</p>
+</li>
+</ul>
+<p>}</p>
+
+<pre><code>- Call mixing with @include after creating selector</code></pre>
+<p>.gettingStartedButton {</p>
+
+<pre><code>@include buttonLayout(#1539db, #8a8ce6);
+
+</code></pre>
+<p>}</p>
+
+<pre><code>- Styling rules that don't take in variables wiithin mixin</code></pre>
+<p>@mixin buttonLayout($innerColor, $outerColor) {</p>
+
+<pre><code>background: radial-gradient($innerColor, $outerColor);
+
+width: 15em;
+
+height: 15em;
+
+color: #ffffff;
+
+margin-right: 10%;
+
+border-radius: 2em;
+</code></pre>
+<p>}
+```</p>
 
 </div>
 </div>
@@ -302,43 +325,60 @@ SASS: @extend to inherit the code</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Mini-hack">Mini-hack<a class="anchor-link" href="#Mini-hack"> </a></h1><p>Write out a mixin in SASS that takes in a color and a font size as the parameter. Within the mixin, set the background color and font color to the color parameter, and set the font size to the font size parameter. Then create a selector that calls the mixin, and pass in a color and font size of your choice as the arguments.</p>
 
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<pre><code>@mixin button($color, $fontSize) {
+    background-color: $color;
+    font-size: $fontSize;
+}
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="nd">@mixin</span> <span class="n">button</span><span class="p">(</span><span class="err">$</span><span class="n">color</span><span class="p">,</span> <span class="err">$</span><span class="n">fontSize</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="err">$</span><span class="n">color</span><span class="p">;</span>
-    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="err">$</span><span class="n">fontSize</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="o">.</span><span class="n">theButton</span> <span class="p">{</span>
-    <span class="nd">@include</span> <span class="n">colored</span><span class="p">(</span><span class="c1">#000000, 18px);</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Function">Function<a class="anchor-link" href="#Function"> </a></h1><p>Take notes here</p>
+.theButton {
+    @include colored(#000000, 18px);
+}</code></pre>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Import">Import<a class="anchor-link" href="#Import"> </a></h1><p>Take notes here</p>
+<h1 id="Function">Function<a class="anchor-link" href="#Function"> </a></h1><ul>
+<li><p>SASS function format:
+```
+@function name(parameters) {</p>
+<p>//code</p>
+<p>@return value;</p>
+</li>
+</ul>
+<p>}</p>
+
+<pre><code>
+- Make function with @function command
+- Specify function ame
+- Inside parenthsesis, specify arguments
+
+- For example, function called sassInvert:</code></pre>
+<p>@function sassInvert($r, $g, $b) {</p>
+
+<pre><code>$newColor: rgb(255 - $r, 255 - $g, 255 - $b);
+
+@return $newColor;
+</code></pre>
+<p>}
+```</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Import">Import<a class="anchor-link" href="#Import"> </a></h1><ul>
+<li>SASS file may get cluttered</li>
+<li>May want to split your code into multiple files and import them into one file</li>
+<li>Import formatting:
+<pre><code>@import "file-name"</code></pre>
+</li>
+<li>Import statement example, to import the functionStyle.scss file into style.scss:
+<pre><code>@import "functionStyle"</code></pre>
+</li>
+</ul>
 
 </div>
 </div>
@@ -359,6 +399,97 @@ SASS: @extend to inherit the code</p>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Quiz Questions</p>
+<ol>
+<li>What is SASS?</li>
+</ol>
+<p>b. A scripting language that has many styling operations</p>
+<ol>
+<li>What is the difference between SASS and SCSS?</li>
+</ol>
+<p>a. They are very similar in their function, but their syntax is slightly different</p>
+<ol>
+<li>What is an example of an advantage of using SASS over just CSS?</li>
+</ol>
+<p>a. SASS has more functions than CSS</p>
+<ol>
+<li>What does SASS stand for?</li>
+</ol>
+<p>b. Syntactically Awesome Style Sheets</p>
+<ol>
+<li>Which of the following is NOT an example of an available SASS directive?</li>
+</ol>
+<p>d. compute</p>
+<ol>
+<li>The __ directive is used to share rules and relationships between selectors.</li>
+</ol>
+<p>b. extend</p>
+<ol>
+<li>What is “@___” called?</li>
+</ol>
+<p>b. Directive</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using SASS</p>
+<ul>
+<li>Extend and mixin to achieve same result: button with blue background color and white text color</li>
+<li>"button" class, base style set as blue background color and white text color</li>
+<li>First example: CSS class extend from "button" class, creating "special-button" class that adds red border to the button</li>
+<li>Second example: SASS mixin, "button-style" defines blue and wwhite colors inluded in both "button" and "special-button", "special-button" also adds red border</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">button</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">blue</span><span class="p">;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="n">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">special</span><span class="o">-</span><span class="n">button</span> <span class="p">{</span>
+  <span class="nd">@extend</span> <span class="n">button</span><span class="p">;</span>
+  <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="n">OR</span>
+
+
+<span class="nd">@mixin</span> <span class="n">button</span><span class="o">-</span><span class="n">style</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">blue</span><span class="p">;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="n">white</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">button</span> <span class="p">{</span>
+  <span class="nd">@include</span> <span class="n">button</span><span class="o">-</span><span class="n">style</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">special</span><span class="o">-</span><span class="n">button</span> <span class="p">{</span>
+  <span class="nd">@include</span> <span class="n">button</span><span class="o">-</span><span class="n">style</span><span class="p">;</span>
+  <span class="n">border</span><span class="p">:</span> <span class="mi">1</span><span class="n">px</span> <span class="n">solid</span> <span class="n">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
