@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      17 min read
+      21 min read
     
 </span></p>
 
@@ -168,15 +168,11 @@ window.onload = wrap_img;
 <p>The process of predictive analysis typically involves the following steps:</p>
 <ol>
 <li>Defining the problem and identifying the relevant data sources</li>
-<li>
-<hr>
-</li>
+<li>Data preprocessing and cleaning to ensure that the data is accurate, complete, and consistent</li>
 <li>Exploring and analyzing the data to identify patterns and trends</li>
 <li>Selecting an appropriate model or algorithm to use for predictions</li>
 <li>Training and validating the model using historical data</li>
-<li>
-<hr>
-</li>
+<li>Using the trained model to make predictions on new data and refining the model as necessary based on the results.</li>
 <li>Monitoring and evaluating the performance of the model over time</li>
 </ol>
 <p>Predictive analysis can help organizations make more informed decisions, improve efficiency, and gain a competitive advantage by leveraging insights from data.</p>
@@ -1041,7 +1037,8 @@ dtype: float64
 <li>Austin Nola, C, .251, 4, 40, .649, 26</li>
 <li>Jose Azocar, OF, .257, 0, 10, .630, 28</li>
 </ul>
-<p>QUESTION: WHAT DO YOU GUYS THINK THE INDEX FOR THIS WOULD BE?</p>
+<p>QUESTION: WHAT DO YOU GUYS THINK THE INDEX FOR THIS WOULD BE?
+The index for this data could be the player names or their jersey numbers, depending on the purpose of the analysis. If the analysis is focused on individual players, using their names as the index would be more appropriate. If the analysis is focused on team statistics, using the jersey numbers as the index could be more useful.</p>
 
 </div>
 </div>
@@ -1049,7 +1046,8 @@ dtype: float64
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Can you explain what is going on in this code segment below. (hint: define what ascending= false means, and df. head means)</p>
+<p>Can you explain what is going on in this code segment below. (hint: define what ascending= false means, and df. head means)
+CSV file named 'padres.csv' is read using the pd.read_csv method and then sorted by the 'Name' column in descending order (largest to smallest) using the sort_values method. df.head(10) displays the first 10 rows of the sorted dataframe, representing the top 10 based on the 'Name' column. df.tail(10) displays the last 10 rows of the sorted dataframe, representing the bottom 10 based on the 'Name' column. In the last line, ', '.join(df.tail(10))) concatenates the bottom 10 rows of the dataframe as a string separated by commas and displays it. The ascending=False parameter in the sort_values method sorts the dataframe in descending order. If it is set to True, it sorts the dataframe in ascending order. df.head is a method that returns the first n rows of a dataframe, where n is the number specified as a parameter. In this case, it is 10.</p>
 
 </div>
 </div>
@@ -1187,6 +1185,34 @@ Name: total_rooms, dtype: float64
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             total_rooms  population  longitude
+total_rooms                                    
+2.0                  2.0         6.0          1
+6.0                  6.0         8.0          1
+8.0                  8.0        13.0          1
+11.0                11.0        24.0          1
+12.0                12.0        18.0          1
+...                  ...         ...        ...
+30450.0          30450.0      9419.0          1
+32054.0          32054.0     15507.0          1
+32627.0          32627.0     28566.0          1
+37937.0          37937.0     16122.0          1
+39320.0          39320.0     16305.0          1
+
+[5926 rows x 3 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -1237,6 +1263,205 @@ Name: total_rooms, dtype: float64
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># create a sample DataFrame</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">'Name'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'Charlie'</span><span class="p">,</span> <span class="s1">'David'</span><span class="p">,</span> <span class="s1">'Emily'</span><span class="p">],</span>
+    <span class="s1">'Age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span>
+    <span class="s1">'Gender'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'F'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">],</span>
+    <span class="s1">'Salary'</span><span class="p">:</span> <span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">70000</span><span class="p">,</span> <span class="mi">40000</span><span class="p">,</span> <span class="mi">80000</span><span class="p">,</span> <span class="mi">60000</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Original data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># find min and max values for 'Age' and 'Salary'</span>
+<span class="n">min_age</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_age</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">min_salary</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Salary'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_salary</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Salary'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Min age:"</span><span class="p">,</span> <span class="n">min_age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Max age:"</span><span class="p">,</span> <span class="n">max_age</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Min salary:"</span><span class="p">,</span> <span class="n">min_salary</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Max salary:"</span><span class="p">,</span> <span class="n">max_salary</span><span class="p">)</span>
+
+<span class="c1"># sort by 'Salary' from greatest to least</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'Salary'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># create a smaller dataframe with only 'Name' and 'Age' columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">'Name'</span><span class="p">,</span> <span class="s1">'Age'</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Small data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># merge with original dataframe on 'Name'</span>
+<span class="n">merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">'Name'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Merged data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original data:
+      Name  Age Gender  Salary
+0    Alice   25      F   50000
+1      Bob   30      M   70000
+2  Charlie   20      M   40000
+3    David   35      M   80000
+4    Emily   27      F   60000
+Min age: 20
+Max age: 35
+Min salary: 40000
+Max salary: 80000
+Sorted data:
+      Name  Age Gender  Salary
+3    David   35      M   80000
+1      Bob   30      M   70000
+4    Emily   27      F   60000
+0    Alice   25      F   50000
+2  Charlie   20      M   40000
+Small data:
+      Name  Age
+3    David   35
+1      Bob   30
+4    Emily   27
+0    Alice   25
+2  Charlie   20
+Merged data:
+      Name  Age_x  Age_y Gender  Salary
+0    David     35     35      M   80000
+1      Bob     30     30      M   70000
+2    Emily     27     27      F   60000
+3    Alice     25     25      F   50000
+4  Charlie     20     20      M   40000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># create a random integer data file with 5 rows and 3 columns</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">"data.txt"</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">'</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="c1"># read data file into a Pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data.txt"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">])</span>
+
+<span class="c1"># find min and max values for column "B"</span>
+<span class="n">min_b</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"B"</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">max_b</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"B"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Min B:"</span><span class="p">,</span> <span class="n">min_b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Max B:"</span><span class="p">,</span> <span class="n">max_b</span><span class="p">)</span>
+
+<span class="c1"># sort DataFrame by column "A" from least to greatest</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># create a smaller DataFrame with only columns "A" and "C"</span>
+<span class="n">small_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Small data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">small_df</span><span class="p">)</span>
+
+<span class="c1"># merge small DataFrame with original DataFrame on column "A"</span>
+<span class="n">merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">small_df</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">"A"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Merged data:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">merged</span><span class="p">)</span>
+
+<span class="c1"># create a multi-dimensional array from column "B"</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"B"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Array:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+
+<span class="c1"># create an array with linearly spaced intervals between min and max values of column "B"</span>
+<span class="n">linspace_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">min_b</span><span class="p">,</span> <span class="n">max_b</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Linspace array:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linspace_array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Min B: nan
+Max B: nan
+Sorted data:
+          A   B   C
+4  19 13 64 NaN NaN
+3   61 20 4 NaN NaN
+0  68 43 38 NaN NaN
+2  77 21 99 NaN NaN
+1  78 14 89 NaN NaN
+Small data:
+          A   C
+4  19 13 64 NaN
+3   61 20 4 NaN
+0  68 43 38 NaN
+2  77 21 99 NaN
+1  78 14 89 NaN
+Merged data:
+          A   B  C_x  C_y
+0  19 13 64 NaN  NaN  NaN
+1   61 20 4 NaN  NaN  NaN
+2  68 43 38 NaN  NaN  NaN
+3  77 21 99 NaN  NaN  NaN
+4  78 14 89 NaN  NaN  NaN
+Array:
+[nan nan nan nan nan]
+Linspace array:
+[nan nan nan nan nan]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1260,55 +1485,22 @@ Name: total_rooms, dtype: float64
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># Generate random integer data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">'Person'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">],</span>
-    <span class="s1">'Age'</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
-    <span class="s1">'Height'</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
-    <span class="s1">'Weight'</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="c1"># Create a Pandas dataframe from the data</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="c1"># Find the minimum and maximum values for each column</span>
-<span class="n">min_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-<span class="n">max_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Minimum values:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">min_values</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Maximum values:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">max_values</span><span class="p">)</span>
-
-<span class="c1"># Sort the dataframe by age, in descending order</span>
-<span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'Age'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Sorted by age:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_sorted</span><span class="p">)</span>
-
-<span class="c1"># Create a smaller dataframe and merge it with the original dataframe</span>
-<span class="n">small_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">'Person'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'F'</span><span class="p">,</span> <span class="s1">'G'</span><span class="p">],</span>
-    <span class="s1">'Age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">41</span><span class="p">],</span>
-    <span class="s1">'Height'</span><span class="p">:</span> <span class="p">[</span><span class="mi">175</span><span class="p">,</span> <span class="mi">185</span><span class="p">],</span>
-    <span class="s1">'Weight'</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">small_df</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Merged dataframes:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">merged_df</span><span class="p">)</span>
-
-<span class="c1"># Generate a 3x3 array of random integers between 0 and 9</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="c1"># random number generation</span>
+<span class="n">random_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Random array:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">random_array</span><span class="p">)</span>
 
-<span class="c1"># Create an array with 5 linearly spaced intervals between 0 and 1</span>
-<span class="n">lin_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Linearly spaced array:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lin_arr</span><span class="p">)</span>
+<span class="c1"># create a multi-dimensional array</span>
+<span class="n">multi_dim_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Multi-dimensional array:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multi_dim_array</span><span class="p">)</span>
+
+<span class="c1"># create an array with linearly spaced intervals between values</span>
+<span class="n">linspace_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Linspace array:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linspace_array</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -1321,40 +1513,18 @@ Name: total_rooms, dtype: float64
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Minimum values:
-Person      A
-Age        27
-Height    153
-Weight     52
-dtype: object
-Maximum values:
-Person      E
-Age        62
-Height    195
-Weight     93
-dtype: object
-Sorted by age:
-  Person  Age  Height  Weight
-3      D   62     195      82
-1      B   48     175      78
-4      E   44     164      93
-0      A   28     153      52
-2      C   27     183      61
-Merged dataframes:
-  Person  Age  Height  Weight
-0      A   28     153      52
-1      B   48     175      78
-2      C   27     183      61
-3      D   62     195      82
-4      E   44     164      93
-0      F   23     175      60
-1      G   41     185      80
-Random array:
-[[2 8 4]
- [0 7 2]
- [5 9 2]]
-Linearly spaced array:
-[0.   0.25 0.5  0.75 1.  ]
+<pre>Random array:
+[[0.77327304 0.66313805 0.6437255 ]
+ [0.47585153 0.84471575 0.22194221]
+ [0.39304766 0.82767032 0.44622181]
+ [0.35590652 0.27731907 0.53694768]
+ [0.58242487 0.83435392 0.3129974 ]]
+Multi-dimensional array:
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+Linspace array:
+[ 0.   2.5  5.   7.5 10. ]
 </pre>
 </div>
 </div>
